@@ -1,0 +1,76 @@
+:root {
+  --background-color: #333;
+  --text-color: #fff;
+  --card-bg-color: #444;
+  --card-border-radius: 12px;
+  --font-family: Arial, sans-serif;
+  --hover-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columns for smaller cards */
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: var(--card-bg-color);
+  border-radius: var(--card-border-radius);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--hover-shadow);
+}
+
+.card-large {
+  grid-column: span 2; /* Sun spans two columns */
+}
+
+.planet-avatar {
+  display: inline-block;
+  margin: 0 auto 10px; /* Centers the circle and adds spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for visual effect */
+}
+
+
+
+h2 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+}
+
+p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #aaa;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr; /* Adjust to 2 columns for smaller screens */
+  }
+}

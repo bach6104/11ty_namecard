@@ -1,0 +1,34 @@
+<div class="card {% if isLarge %}card-large{% endif %}">
+  <!-- Debug: Display passed data -->
+  <pre style="background: #222; color: #fff; padding: 10px; font-size: 12px;">
+    Debugging planet-card.liquid:
+    Name: {{ name | default: "No Name Provided" }}
+    Type: {{ type | default: "No Type Provided" }}
+    AU Distance: {{ au | default: "No AU Provided" }}
+    Large: {% if large %}Yes{% else %}No{% endif %}
+    Size: {{ size | default: "No Size Provided" }}
+    Color: {{ color | default: "No Color Provided" }}
+  </pre>
+
+  <!-- Circle for planet -->
+  <div
+    class="planet-avatar"
+    style="
+      background-color: {{ color }};
+      width: {{ size }};
+      height: {{ size }};
+      border-radius: 50%;"
+  ></div>
+
+  <!-- Planet Name -->
+  <h2>{{ name }}</h2>
+
+  <!-- Type or AU Distance -->
+  <p>
+    {% if type %}
+      {{ type }}
+    {% else %}
+      {{ au }} AU Distance
+    {% endif %}
+  </p>
+</div>

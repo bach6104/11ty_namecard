@@ -1,7 +1,61 @@
----
+--- 
 layout: layout.liquid
-title: 11ty Boilerplate
+title: "Planetary Playing Cards"
 ---
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
-<img alt="pine" src="/images/pine.png" width="50" />
+<div class="grid-container">
+  {% include "partials/planet-card.liquid"
+     name="Sun"
+     type="Type G2V"
+     size="200px"
+     color="#FFD700"
+     large="true" %}
+
+  {% include "partials/planet-card.liquid"
+     name="Mercury"
+     au="0.39"
+     size="60px"
+     color="#A9A9A9" %}
+
+  {% include "partials/planet-card.liquid"
+     name="Venus"
+     au="0.72"
+     size="70px"
+     color="#D2B48C" %}
+
+  {% include "partials/planet-card.liquid"
+     name="Earth"
+     au="1.0"
+     size="75px"
+     color="#1E90FF" %}
+
+  {% include "partials/planet-card.liquid"
+     name="Mars"
+     au="1.52"
+     size="65px"
+     color="#FF4500" %}
+
+  {% include "partials/planet-card.liquid"
+     name="Jupiter"
+     au="5.2"
+     size="110px"
+     color="#DAA520" %}
+
+  {% include "partials/planet-card.liquid"
+     name="Saturn"
+     au="9.58"
+     size="100px"
+     color="#F4A460" %}
+
+  {% include "partials/planet-card.liquid"
+     name="Uranus"
+     au="19.2"
+     size="90px"
+     color="#AFEEEE" %}
+
+  {% include "partials/planet-card.liquid"
+     name="Neptune"
+     au="30.05"
+     size="88px"
+     color="#4682B4" %}
+</div>
