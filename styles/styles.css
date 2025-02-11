@@ -21,12 +21,37 @@ header {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columns for smaller cards */
+  grid-template-columns: 1.5fr 2fr; 
+  grid-template-rows: auto auto; 
   gap: 20px;
   padding: 20px;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
+  align-items: stretch; 
 }
+
+
+
+.large-card {
+  grid-row: span 2;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 96.4%; 
+  padding: 20px; 
+  box-sizing: border-box; 
+}
+
+
+
+.planet-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  grid-template-rows: auto auto; 
+  gap: 20px;
+}
+
 
 .card {
   background-color: var(--card-bg-color);
@@ -34,10 +59,6 @@ header {
   text-align: center;
   padding: 20px;
   transition: transform 0.3s, box-shadow 0.3s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .card:hover {
@@ -45,32 +66,8 @@ header {
   box-shadow: var(--hover-shadow);
 }
 
-.card-large {
-  grid-column: span 2; /* Sun spans two columns */
-}
-
 .planet-avatar {
-  display: inline-block;
-  margin: 0 auto 10px; /* Centers the circle and adds spacing */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for visual effect */
-}
-
-
-
-h2 {
-  font-size: 1.2rem;
-  margin: 10px 0 5px;
-}
-
-p {
-  font-size: 0.9rem;
-  margin: 0;
-  color: #aaa;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr; /* Adjust to 2 columns for smaller screens */
-  }
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px;
 }

@@ -1,61 +1,17 @@
---- 
+---
 layout: layout.liquid
 title: "Planetary Playing Cards"
 ---
 
-<div class="grid-container">
-  {% include "partials/planet-card.liquid"
-     name="Sun"
-     type="Type G2V"
-     size="200px"
-     color="#FFD700"
-     large="true" %}
+{% planet-cards 'star large-card' 'Sun' 'Type G2V' '200px' '#FFD700' %}
 
-  {% include "partials/planet-card.liquid"
-     name="Mercury"
-     au="0.39"
-     size="60px"
-     color="#A9A9A9" %}
-
-  {% include "partials/planet-card.liquid"
-     name="Venus"
-     au="0.72"
-     size="70px"
-     color="#D2B48C" %}
-
-  {% include "partials/planet-card.liquid"
-     name="Earth"
-     au="1.0"
-     size="75px"
-     color="#1E90FF" %}
-
-  {% include "partials/planet-card.liquid"
-     name="Mars"
-     au="1.52"
-     size="65px"
-     color="#FF4500" %}
-
-  {% include "partials/planet-card.liquid"
-     name="Jupiter"
-     au="5.2"
-     size="110px"
-     color="#DAA520" %}
-
-  {% include "partials/planet-card.liquid"
-     name="Saturn"
-     au="9.58"
-     size="100px"
-     color="#F4A460" %}
-
-  {% include "partials/planet-card.liquid"
-     name="Uranus"
-     au="19.2"
-     size="90px"
-     color="#AFEEEE" %}
-
-  {% include "partials/planet-card.liquid"
-     name="Neptune"
-     au="30.05"
-     size="88px"
-     color="#4682B4" %}
+<div class="planet-grid">
+  {% planet-cards 'planet' 'Mercury' '0.39 AU' '60px' '#A9A9A9' %}
+  {% planet-cards 'planet' 'Venus' '0.72 AU' '70px' '#D2B48C' %}
+  {% planet-cards 'planet' 'Earth' '1.00 AU' '75px' '#1E90FF' %}
+  {% planet-cards 'planet' 'Mars' '1.52 AU' '65px' '#FF4500' %}
+  {% planet-cards 'planet' 'Jupiter' '5.20 AU' '110px' '#DAA520' %}
+  {% planet-cards 'planet' 'Saturn' '9.54 AU' '100px' '#F4A460' %}
+  {% planet-cards 'planet' 'Uranus' '19.2 AU' '90px' '#AFEEEE' %}
+  {% planet-cards 'planet' 'Neptune' '30.1 AU' '88px' '#4682B4' %}
 </div>
